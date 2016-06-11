@@ -12,6 +12,13 @@ This project solves the following seemingly simple task:
 
 > 1 _concat_ 2 = 12.
 
+Resource usage
+--------------
+
+On my hardware (4-core Intel Core i7 870@2.93 GHz with HyperThreading enabled)
+the program executes for about 4.5 hours. It uses only small amount of RAM
+(about 15 MiB).
+
 See also
 --------
 

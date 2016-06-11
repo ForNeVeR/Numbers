@@ -16,7 +16,7 @@ DEATH.
 
 ![Destructive memetic agent](http://scp-ru.wdfiles.com/local--files/scp-001/1.jpg)
 
-## MEMETIC KILL AGENT ACTIVATED
+## [MEMETIC KILL AGENT ACTIVATED][scp-001]
 
 Numbers
 =======
@@ -38,3 +38,4 @@ See also
 [Hundreds][hundreds] is a competing software.
 
 [hundreds]: https://github.com/Atomosk/Hundreds
+[scp-001]: http://www.scp-wiki.net/scp-001

@@ -1,4 +1,5 @@
 ﻿open System
+open System.IO
 open System.Linq
 
 type Operation =
@@ -53,36 +54,40 @@ let execute expression =
     | [Const c] -> c
     | any -> failwithf "Unsolvable expression %A" any
     
-let rec print = function
+let rec print (output : TextWriter) = function
     | [] -> ()
-    | Const c :: expr -> printf "%d" c; print expr
-    | Op o :: expr -> printf "%s" <| toString o; print expr
+    | Const c :: expr -> output.Write c; print output expr
+    | Op o :: expr -> output.Write (toString o); print output expr
 
 let monitor = obj ()
-let printExpression e =
+let printExpression (o : TextWriter) e =
     lock monitor <| fun () -> 
-        print e
-        printfn ""
+        o.Write(print o e)
+        o.WriteLine()
 
 let combine expr operator operand = List.append expr [ Op operator; Const operand ]    
 
-let rec private gen expression = function
-    | [] -> if execute expression = target then printExpression expression
+let rec private gen output expression = function
+    | [] -> if execute expression = target then printExpression output expression
     | number :: ns ->
-        Array.iter (fun o -> gen (combine expression o number) ns) operations
+        Array.iter (fun o -> gen output (combine expression o number) ns) operations
 
-let solvePermutation' = function
-    | n :: ns -> gen [Const n] ns
+let solvePermutation' output = function
+    | n :: ns -> gen output [Const n] ns
 
 let solved = ref 0
-let solvePermutation p =
+let solvePermutation output p =
     let count = System.Threading.Interlocked.Increment solved
-    solvePermutation' p
+    solvePermutation' output p
     System.Console.Error.WriteLine ("Permutation {0} finished", count)
 
 [<EntryPoint>]
-let main _ = 
-    let permutations = List.permutations numbers
-    ParallelEnumerable.AsParallel permutations
-    |> fun s -> ParallelEnumerable.ForAll (s, Action<_>(solvePermutation))
-    0
+let rec main = function
+    | [| fileName |] ->
+        use result = new FileStream(fileName, FileMode.Create, FileAccess.Write)
+        use writer = new StreamWriter(result)
+        let permutations = List.permutations numbers
+        ParallelEnumerable.AsParallel permutations
+        |> fun s -> ParallelEnumerable.ForAll (s, Action<_>(solvePermutation writer))
+        0
+    | _ -> main [| "numbers.txt" |]

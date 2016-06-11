@@ -10,9 +10,9 @@ DEATH.
 
 ## YOU HAVE BEEN WARNED.
 
-![Empty padding to save the lives](https://upload.wikimedia.org/wikipedia/commons/5/59/Empty.png)]
-![Empty padding to save the lives](https://upload.wikimedia.org/wikipedia/commons/5/59/Empty.png)]
-![Empty padding to save the lives](https://upload.wikimedia.org/wikipedia/commons/5/59/Empty.png)]
+![Empty padding to save the lives](https://upload.wikimedia.org/wikipedia/commons/5/59/Empty.png)
+![Empty padding to save the lives](https://upload.wikimedia.org/wikipedia/commons/5/59/Empty.png)
+![Empty padding to save the lives](https://upload.wikimedia.org/wikipedia/commons/5/59/Empty.png)
 
 ![Destructive memetic agent](http://scp-ru.wdfiles.com/local--files/scp-001/1.jpg)
 

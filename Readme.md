@@ -1,23 +1,3 @@
-+ + + INFORMATION CLASSIFIED + + +
-==================================
-WARNING
--------
-
-ANY NON-AUTHORIZED PERSONNEL ACCESSING THESE MATERIALS WILL BE IMMEDIATELY
-TERMINATED THROUGH BERRYMAN-LANGFORD MEMETIC KILL AGENT. SCROLLING DOWN WITHOUT
-PROPER MEMETIC INOCULATION WILL RESULT IN IMMEDIATE CARDIAC ARREST FOLLOWED BY
-DEATH.
-
-## YOU HAVE BEEN WARNED.
-
-![Empty padding to save the lives](https://upload.wikimedia.org/wikipedia/commons/5/59/Empty.png)
-![Empty padding to save the lives](https://upload.wikimedia.org/wikipedia/commons/5/59/Empty.png)
-![Empty padding to save the lives](https://upload.wikimedia.org/wikipedia/commons/5/59/Empty.png)
-
-![Destructive memetic agent](http://scp-ru.wdfiles.com/local--files/scp-001/1.jpg)
-
-## [MEMETIC KILL AGENT ACTIVATED][scp-001]
-
 Numbers
 =======
 
@@ -38,4 +18,3 @@ See also
 [Hundreds][hundreds] is a competing software.
 
 [hundreds]: https://github.com/Atomosk/Hundreds
-[scp-001]: http://www.scp-wiki.net/scp-001

@@ -38,8 +38,8 @@ let private compare path1 path2 =
     printfn "Calculating set difference [%s] / [%s]..." path1 path2
     let diff2 = Set.difference data1 data2
 
-    printDiff path1 path2 diff1
-    printDiff path1 path2 diff1
+    printDiff path2 path1 diff1
+    printDiff path1 path2 diff2
 
 [<EntryPoint>]
 let main = function
